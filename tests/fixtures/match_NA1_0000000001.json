@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "dataVersion": "2",
+    "matchId": "NA1_0000000001",
+    "participants": [
+      "mock-puuid-001", "mock-puuid-002", "mock-puuid-003", "mock-puuid-004", "mock-puuid-005",
+      "mock-puuid-006", "mock-puuid-007", "mock-puuid-008", "mock-puuid-009", "mock-puuid-010"
+    ]
+  },
+  "info": {
+    "endOfGameResult": "GameComplete",
+    "gameCreation": 1770000000000,
+    "gameDuration": 1842,
+    "gameEndTimestamp": 1770001842000,
+    "gameId": 1000000001,
+    "gameMode": "CLASSIC",
+    "gameName": "teambuilder-match-1000000001",
+    "gameStartTimestamp": 1770000000000,
+    "gameType": "MATCHED_GAME",
+    "gameVersion": "16.1.1",
+    "mapId": 11,
+    "platformId": "NA1",
+    "queueId": 420,
+    "tournamentCode": "",
+    "participants": [
+      {"assists": 9, "championId": 266, "championName": "Aatrox", "deaths": 5, "goldEarned": 11320, "individualPosition": "TOP", "item0": 6692, "item1": 3047, "item2": 2504, "item3": 3071, "item4": 0, "item5": 3340, "item6": 3363, "kills": 6, "lane": "TOP", "neutralMinionsKilled": 8, "participantId": 1, "puuid": "mock-puuid-001", "summonerName": "MockTopBlue", "teamId": 100, "teamPosition": "TOP", "totalMinionsKilled": 176, "totalDamageDealtToChampions": 18842, "visionScore": 18, "win": true},
+      {"assists": 11, "championId": 64, "championName": "LeeSin", "deaths": 4, "goldEarned": 12100, "individualPosition": "JUNGLE", "item0": 6692, "item1": 3158, "item2": 3071, "item3": 3053, "item4": 0, "item5": 3340, "item6": 3364, "kills": 8, "lane": "JUNGLE", "neutralMinionsKilled": 154, "participantId": 2, "puuid": "mock-puuid-002", "summonerName": "MockJungleBlue", "teamId": 100, "teamPosition": "JUNGLE", "totalMinionsKilled": 24, "totalDamageDealtToChampions": 16200, "visionScore": 29, "win": true},
+      {"assists": 14, "championId": 103, "championName": "Ahri", "deaths": 3, "goldEarned": 13750, "individualPosition": "MIDDLE", "item0": 6655, "item1": 4645, "item2": 3089, "item3": 3157, "item4": 0, "item5": 3340, "item6": 3363, "kills": 12, "lane": "MIDDLE", "neutralMinionsKilled": 8, "participantId": 3, "puuid": "mock-puuid-003", "summonerName": "MockMidBlue", "teamId": 100, "teamPosition": "MIDDLE", "totalMinionsKilled": 201, "totalDamageDealtToChampions": 25100, "visionScore": 21, "win": true},
+      {"assists": 10, "championId": 51, "championName": "Caitlyn", "deaths": 4, "goldEarned": 14520, "individualPosition": "BOTTOM", "item0": 3031, "item1": 3094, "item2": 3036, "item3": 3033, "item4": 0, "item5": 3340, "item6": 3363, "kills": 10, "lane": "BOTTOM", "neutralMinionsKilled": 12, "participantId": 4, "puuid": "mock-puuid-004", "summonerName": "MockBotBlue", "teamId": 100, "teamPosition": "BOTTOM", "totalMinionsKilled": 226, "totalDamageDealtToChampions": 23410, "visionScore": 19, "win": true},
+      {"assists": 20, "championId": 412, "championName": "Thresh", "deaths": 6, "goldEarned": 7810, "individualPosition": "UTILITY", "item0": 3190, "item1": 3117, "item2": 3107, "item3": 0, "item4": 0, "item5": 3340, "item6": 3364, "kills": 2, "lane": "BOTTOM", "neutralMinionsKilled": 0, "participantId": 5, "puuid": "mock-puuid-005", "summonerName": "MockSupportBlue", "teamId": 100, "teamPosition": "UTILITY", "totalMinionsKilled": 32, "totalDamageDealtToChampions": 6500, "visionScore": 64, "win": true},
+      {"assists": 4, "championId": 122, "championName": "Darius", "deaths": 7, "goldEarned": 9850, "individualPosition": "TOP", "item0": 6631, "item1": 3047, "item2": 3071, "item3": 2504, "item4": 0, "item5": 3340, "item6": 3363, "kills": 4, "lane": "TOP", "neutralMinionsKilled": 5, "participantId": 6, "puuid": "mock-puuid-006", "summonerName": "MockTopRed", "teamId": 200, "teamPosition": "TOP", "totalMinionsKilled": 151, "totalDamageDealtToChampions": 15400, "visionScore": 15, "win": false},
+      {"assists": 8, "championId": 141, "championName": "Kayn", "deaths": 8, "goldEarned": 10130, "individualPosition": "JUNGLE", "item0": 6692, "item1": 3158, "item2": 3071, "item3": 3133, "item4": 0, "item5": 3340, "item6": 3364, "kills": 5, "lane": "JUNGLE", "neutralMinionsKilled": 132, "participantId": 7, "puuid": "mock-puuid-007", "summonerName": "MockJungleRed", "teamId": 200, "teamPosition": "JUNGLE", "totalMinionsKilled": 20, "totalDamageDealtToChampions": 14780, "visionScore": 24, "win": false},
+      {"assists": 6, "championId": 238, "championName": "Zed", "deaths": 9, "goldEarned": 10820, "individualPosition": "MIDDLE", "item0": 6692, "item1": 3142, "item2": 3814, "item3": 3071, "item4": 0, "item5": 3340, "item6": 3364, "kills": 7, "lane": "MIDDLE", "neutralMinionsKilled": 10, "participantId": 8, "puuid": "mock-puuid-008", "summonerName": "MockMidRed", "teamId": 200, "teamPosition": "MIDDLE", "totalMinionsKilled": 189, "totalDamageDealtToChampions": 20900, "visionScore": 16, "win": false},
+      {"assists": 7, "championId": 22, "championName": "Ashe", "deaths": 8, "goldEarned": 11200, "individualPosition": "BOTTOM", "item0": 6672, "item1": 3036, "item2": 3094, "item3": 3033, "item4": 0, "item5": 3340, "item6": 3363, "kills": 6, "lane": "BOTTOM", "neutralMinionsKilled": 11, "participantId": 9, "puuid": "mock-puuid-009", "summonerName": "MockBotRed", "teamId": 200, "teamPosition": "BOTTOM", "totalMinionsKilled": 210, "totalDamageDealtToChampions": 18110, "visionScore": 22, "win": false},
+      {"assists": 13, "championId": 40, "championName": "Janna", "deaths": 8, "goldEarned": 6920, "individualPosition": "UTILITY", "item0": 3011, "item1": 3117, "item2": 3504, "item3": 0, "item4": 0, "item5": 3340, "item6": 3364, "kills": 1, "lane": "BOTTOM", "neutralMinionsKilled": 0, "participantId": 10, "puuid": "mock-puuid-010", "summonerName": "MockSupportRed", "teamId": 200, "teamPosition": "UTILITY", "totalMinionsKilled": 27, "totalDamageDealtToChampions": 5200, "visionScore": 58, "win": false}
+    ],
+    "teams": [
+      {"bans": [{"championId": 55, "pickTurn": 1}], "objectives": {"baron": {"first": true, "kills": 1}, "dragon": {"first": true, "kills": 3}, "tower": {"first": true, "kills": 9}}, "teamId": 100, "win": true},
+      {"bans": [{"championId": 157, "pickTurn": 1}], "objectives": {"baron": {"first": false, "kills": 0}, "dragon": {"first": false, "kills": 1}, "tower": {"first": false, "kills": 2}}, "teamId": 200, "win": false}
+    ]
+  }
+}
