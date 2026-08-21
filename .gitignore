@@ -23,5 +23,10 @@ crash.log
 # Pipeline output
 data/
 
+# Local Airflow rehearsal runtime
+airflow/logs/
+airflow/.env
+airflow/config/
+
 # Workbench
 .vscode/

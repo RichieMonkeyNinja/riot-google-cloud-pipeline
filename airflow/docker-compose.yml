@@ -1,0 +1,72 @@
+# Local rehearsal only. Cloud Composer is the managed deployment target.
+name: lol-airflow-local
+
+x-airflow-common: &airflow-common
+  image: lol-airflow-local:dev
+  build:
+    context: ..
+    dockerfile: airflow/Dockerfile
+  environment: &airflow-environment
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+    GCP_PROJECT_ID: ${GCP_PROJECT_ID:-self-learn-spark}
+    GCP_REGION: ${GCP_REGION:-us-east1}
+    RAW_BUCKET: ${RAW_BUCKET:-self-learn-spark-dev-lol-raw}
+    CURATED_BUCKET: ${CURATED_BUCKET:-self-learn-spark-dev-lol-curated}
+    DATAPROC_STAGING_BUCKET: ${DATAPROC_STAGING_BUCKET:-self-learn-spark-dev-dataproc-staging}
+    PIPELINE_ARTIFACTS_BUCKET: ${PIPELINE_ARTIFACTS_BUCKET:-self-learn-spark-dev-pipeline-artifacts}
+    PIPELINE_SERVICE_ACCOUNT: ${PIPELINE_SERVICE_ACCOUNT:-lol-pipeline@self-learn-spark.iam.gserviceaccount.com}
+    BQ_DATASET: ${BQ_DATASET:-lol_analytics}
+    INGESTION_JOB_NAME: ${INGESTION_JOB_NAME:-lol-riot-ingestion}
+    DBT_JOB_NAME: ${DBT_JOB_NAME:-lol-dbt-build}
+  volumes:
+    - ./dags:/opt/airflow/dags:ro
+    - ./logs:/opt/airflow/logs
+    # Read-only local ADC. Needed only when run_real_work=true.
+    - ${HOME}/.config/gcloud:/opt/airflow/.config/gcloud:ro
+  user: "50000:0"
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  airflow-init:
+    <<: *airflow-common
+    command: >-
+      bash -c "airflow db migrate && (airflow users create
+      --username airflow --password airflow --firstname Local --lastname Admin
+      --role Admin --email airflow@example.invalid || true)"
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: airflow webserver
+    ports:
+      - "8080:8080"
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: airflow scheduler
+
+  airflow-cli:
+    <<: *airflow-common
+    profiles: ["cli"]
+    command: bash
+
+volumes:
+  postgres-data:

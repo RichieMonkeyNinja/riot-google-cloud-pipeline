@@ -1,0 +1,25 @@
+# Do not send secrets, local environments, generated data, or Terraform state
+# to Docker during `docker build`.
+.git/
+.venv/
+.uv-cache/
+dbt/.venv/
+**/__pycache__/
+*.py[cod]
+
+.env
+.env.*
+*-service-account.json
+service-account*.json
+credentials*.json
+
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+data/
+tmp/
+tests/

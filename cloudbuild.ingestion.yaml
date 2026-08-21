@@ -1,0 +1,12 @@
+# Cloud Build runs this recipe in GCP. _IMAGE_URI is supplied by the helper
+# script and includes both the Artifact Registry repository and a unique tag.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --tag
+      - ${_IMAGE_URI}
+      - .
+
+images:
+  - ${_IMAGE_URI}

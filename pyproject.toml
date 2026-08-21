@@ -2,4 +2,18 @@
 name = "gcp-self"
 version = "0.1.0"
 requires-python = ">=3.11,<3.12"
-dependencies = []
+dependencies = [
+    "google-cloud-secret-manager>=2.30.0",
+    "google-cloud-storage>=3.13.1",
+    "pyspark>=3.5,<4",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0,<10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
