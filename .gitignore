@@ -30,3 +30,6 @@ airflow/config/
 
 # Workbench
 .vscode/
+
+# Temporary Local Files
+*tmp/
