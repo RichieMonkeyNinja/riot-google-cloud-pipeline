@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars, then replace the value with your own
+# billed GCP project ID. Do not commit terraform.tfvars.
+project_id = "replace-with-your-project-id"
+
+# us-east1 is South Carolina. Change this only before the first apply.
+region      = "us-east1"
+environment = "dev"
