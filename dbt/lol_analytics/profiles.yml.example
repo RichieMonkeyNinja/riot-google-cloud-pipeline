@@ -1,0 +1,12 @@
+# Copy this file to profiles.yml, then replace YOUR_GCP_PROJECT_ID.
+# The real profiles.yml is deliberately ignored by Git.
+lol_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: YOUR_GCP_PROJECT_ID
+      dataset: lol_analytics
+      location: us-east1
+      threads: 4

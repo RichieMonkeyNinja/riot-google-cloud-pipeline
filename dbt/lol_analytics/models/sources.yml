@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: silver
+    description: Validated player-match records created by the PySpark bronze-to-silver job.
+    database: "{{ target.database }}"
+    schema: lol_analytics
+    tables:
+      - name: silver_participants
+        description: One validated player in one League of Legends match.
+        columns:
+          - name: match_id
+            tests:
+              - not_null
+          - name: participant_id
+            tests:
+              - not_null
+          - name: puuid
+            tests:
+              - not_null
+          - name: champion_id
+            tests:
+              - not_null
+          - name: champion_name
+            tests:
+              - not_null
+          - name: game_version
+            tests:
+              - not_null
+          - name: won
+            tests:
+              - not_null

@@ -1,0 +1,10 @@
+# dbt build artifacts and downloaded packages
+target/
+logs/
+dbt_packages/
+
+# Local configuration may contain credentials or personal target names.
+.env
+.env.*
+**/profiles.yml
+!**/profiles.yml.example

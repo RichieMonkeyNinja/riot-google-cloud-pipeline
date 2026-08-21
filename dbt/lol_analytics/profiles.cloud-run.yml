@@ -1,0 +1,13 @@
+# This profile is baked into the dbt Cloud Run image. `method: oauth` means
+# dbt uses Google Application Default Credentials; on Cloud Run those come
+# from the attached service account, not a downloaded key file or browser.
+lol_analytics:
+  target: cloud_run
+  outputs:
+    cloud_run:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: lol_analytics
+      location: US
+      threads: 4

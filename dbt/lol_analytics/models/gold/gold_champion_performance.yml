@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: gold_champion_performance
+    description: >
+      One row per game date, game version, and champion. This is the first gold
+      table: simple, analyst-friendly champion performance metrics.
+    columns:
+      - name: game_date
+        tests:
+          - not_null
+      - name: game_version
+        tests:
+          - not_null
+      - name: champion_id
+        tests:
+          - not_null
+      - name: champion_name
+        tests:
+          - not_null
+      - name: player_games
+        tests:
+          - not_null
+      - name: matches_played
+        tests:
+          - not_null
+      - name: win_rate
+        tests:
+          - not_null
