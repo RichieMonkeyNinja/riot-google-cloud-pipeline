@@ -25,6 +25,14 @@ behind them; the League of Legends data is only the example dataset.
   if it is not clear.
 - Suggest another tool only when it makes the lesson simpler, safer, or more
   appropriate, and explain the trade-off.
+- For every future task, proactively suggest a more reproducible or
+  industry-standard alternative when one exists. Explain the practical
+  trade-off in beginner-friendly language (for example, pytest instead of
+  unittest when its fixtures and failure output improve the project).
+- Before making a materially different architecture, tool, or workflow choice,
+  ask the learner for confirmation. Prefer approaches that another student can
+  reproduce from a clean clone without sharing secrets or relying on personal
+  machine state.
 
 ## Safety and credentials
 
