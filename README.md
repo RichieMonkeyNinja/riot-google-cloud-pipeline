@@ -18,7 +18,7 @@ Cloud Composer is an
 optional Airflow demonstration environment; it is disabled by default because
 it has an hourly cost while it exists.
 
-![alt text](<images/gcp_architecture.png>)
+![alt text](<images/gcp_architecture_v2.png>)
 
 ## What this project demonstrates
 
