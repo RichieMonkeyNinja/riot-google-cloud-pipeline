@@ -1,0 +1,27 @@
+# Python / uv
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*-service-account.json
+service-account*.json
+credentials*.json
+
+# Terraform local state and variables
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+# Pipeline output
+data/
+
+# Workbench
+.vscode/
